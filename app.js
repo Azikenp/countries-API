@@ -117,7 +117,13 @@ const renderCountry = function(data, className = ''){
 
 const getCountryData = function(country){
     fetch(`https://restcountries.com/v3.1/name/${country}`)
-    .then(response => response.json())
+    .then(response => {
+
+        if (!response.ok) {
+            throw new Error(`Country not found (${response.status})`)
+        }
+        return response.json()
+    })
     .then(data => {
         renderCountry(data[0]);
         console.log(data[0].borders[0]);
@@ -144,7 +150,7 @@ const getCountryData = function(country){
     })
 };
 
-getCountryData('brazil');
+getCountryData('brazils');
 
 
 

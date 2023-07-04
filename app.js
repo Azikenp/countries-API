@@ -154,15 +154,3 @@ getCountryData('brazil');
 
 
 
-
-
-
-try{
-    let y = 10
-    const z = 30
-    z =20
-} catch {
-    
-} finally{
-    console.log('yes');
-}

@@ -220,7 +220,7 @@ Promise.any([
     Promise.resolve('Success'),
     Promise.reject('ERROR'),
     Promise.resolve('Another Success'),
-]).then(res => console.log(res)).catch(err => console.error(err));
+]).then(res => console.log(res)).catch(err => console.error(err))
 
 
 
